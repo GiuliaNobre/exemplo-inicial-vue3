@@ -1,21 +1,53 @@
-<script setup>
+<script>
 import HelloWorld from './components/HelloWorld.vue'
 import TheWelcome from './components/TheWelcome.vue'
+
+export default {
+  data() {
+    return {
+      contador: 5
+    }
+  },
+  methods: {
+    incrementarContador() {
+      this.contador++
+    },
+    decrementarContador() {
+      this.contador--
+    }
+  },
+  mounted() {
+    console.log(`O valor inicial do contador é ${this.contador}.`)
+  }
+}
+
+
+
+
+
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  <button @click="incrementarContador">Incrementar</button>
+  <button @click="decrementarContador">Decrementar</button>
+  <p>Valor do contador é: {{ contador }}</p>
 </template>
+
+<style scoped>
+button {
+  font-weight: bold;
+  background-color: #a34caf;
+  color: rgb(248, 222, 222);
+  border: 2px solid #070404;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  
+}
+</style>
+
 
 <style scoped>
 header {
