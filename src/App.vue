@@ -1,6 +1,6 @@
 <script setup>
-    const nome = 'João'
-    const idade = 25
+    const nome = 'Giulia'
+    const idade = 16
 
     function inverter(texto) {
         return texto.split('').reverse().join('')
@@ -19,9 +19,9 @@
         <hr />
         <p>Para completar 50 anos faltam: {{ (50-idade) }} anos</p>
         <p>O nome tem {{ nome.length }} caracteres</p>
-        <p>O nome invertido é: </p>
+        <p>O nome invertido é: {{ inverter(nome).toUpperCase() }} </p>
         <hr />
-        <p> Exemplo de saudação usando função</p>
+        <p> {{ saudacao() }}</p>
         
       
     </div>
