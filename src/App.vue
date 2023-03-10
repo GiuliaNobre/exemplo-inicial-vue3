@@ -23,20 +23,21 @@
         <hr />
         <p> {{ saudacao() }}</p>
         
+        
       
     </div>
 </template>
 
 <style scoped>
 .info {
-  background-color: rgba(35,12,22,1);
+  background-color: rgb(96, 43, 182);
   padding: 20px 30px;
-  color: rgb(183, 210, 219);
+  color: rgb(255, 255, 255);
   border-radius: 10px;
 }
 
 h1 {
-  color: white;
+  color: rgb(228, 226, 228);
   font-weight: bold;
   font-size: 1.5em;
 }
